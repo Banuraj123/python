@@ -1,0 +1,19 @@
+print("banuraj b k \n1AY24AI015 \nAIML 'M' ")
+
+class Kangaroo:
+    def __init__(self):
+        # Initialize with a new empty list (to avoid shared list issues!)
+        self.pouch_contents = []
+
+    def put_in_pouch(self, item):
+        self.pouch_contents.append(item)
+
+    def __str__(self):
+        content_str = ', '.join(str(item) for item in self.pouch_contents)
+        return f"Kangaroo with pouch contents: [{content_str}]"
+
+kanga = Kangaroo()
+roo = Kangaroo()
+kanga.put_in_pouch(roo)
+print("Kanga:", kanga)
+print("Roo:", roo)
